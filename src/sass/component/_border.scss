@@ -1,0 +1,80 @@
+.keyboard-wrapper {
+  background-color: $color-keyboard;
+  padding: 15px;
+  border: 2px solid black;
+  display: block;
+  border-radius: 4px;
+  width: 870px;
+  height: 310px;
+  margin: 0 auto;
+
+
+}
+
+.key {
+  float: left;
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 5px;
+  margin: 3px;
+  background-color: #2d2a2a;
+  opacity: 999;
+
+  &__symbol {
+    justify-content: center;
+    margin: 0;
+    padding: 3px;
+  }
+
+  &_delete {
+    width: 80px;
+  }
+
+  &_tab {
+    width: 80px;
+  }
+
+  &_capslock {
+    width: 94px;
+  }
+
+  &_return {
+    width: 94px;
+  }
+
+  &_shift {
+    width: 123px;
+  }
+
+  &_command {
+    width: 70px;
+  }
+
+  &_space {
+    width: 270px;
+  }
+
+}
+
+.input {
+  width: 870px;
+  min-height: 280px;
+  margin: 40px auto 10px auto;
+  display: block;
+}
+
+.header {
+  font-size: 3.2rem;
+  text-align: center;
+  color: rebeccapurple;
+  letter-spacing: 0.06em;
+  &__logo{
+
+
+  }
+}
+
+
+
