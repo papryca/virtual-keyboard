@@ -1,5 +1,5 @@
 const Key = class {
-    constructor(keyCode, additionalText, mainText,  cls) {
+    constructor(keyCode, additionalText, mainText, cls) {
         this.keyCode = keyCode;
         this.mainText = mainText;
         this.additionalText = additionalText;
@@ -8,74 +8,73 @@ const Key = class {
 };
 
 const keyboardLayout = [
-    new Key('192', '`', '~', 'key_regular'),
-    new Key('49', '1', '!', 'key_regular'),
-    new Key('50', '2', '@', 'key_regular'),
-    new Key('51', '3', '#', 'key_regular'),
-    new Key('52', '4', '$', 'key_regular'),
-    new Key('53', '5', '%', 'key_regular'),
-    new Key('54', '6', '^', 'key_regular'),
-    new Key('55', '7', '&', 'key_regular'),
-    new Key('56', '8', '*', 'key_regular'),
-    new Key('57', '9', '(', 'key_regular'),
-    new Key('48', '0', ')', 'key_regular'),
-    new Key('189', '-', '_', 'key_regular'),
-    new Key('187', '=', '+', 'key_regular'),
-    new Key('8', 'delete', '', 'key_delete'),
+    new Key('Backquote', '`', '~', 'key_regular'),
+    new Key('Digit1', '1', '!', 'key_regular'),
+    new Key('Digit2', '2', '@', 'key_regular'),
+    new Key('Digit3', '3', '#', 'key_regular'),
+    new Key('Digit4', '4', '$', 'key_regular'),
+    new Key('Digit5', '5', '%', 'key_regular'),
+    new Key('Digit6', '6', '^', 'key_regular'),
+    new Key('Digit7', '7', '&', 'key_regular'),
+    new Key('Digit8', '8', '*', 'key_regular'),
+    new Key('Digit9', '9', '(', 'key_regular'),
+    new Key('Digit0', '0', ')', 'key_regular'),
+    new Key('Minus', '-', '_', 'key_regular'),
+    new Key('Equal', '=', '+', 'key_regular'),
+    new Key('Backspace', 'delete', '', 'key_delete'),
 
-    new Key('9', 'tab', '', 'key_tab'),
-    new Key('113', 'q', 'Q', 'key_regular'),
-    new Key('119', 'w', 'W', 'key_regular'),
-    new Key('101', 'e', 'E', 'key_regular'),
-    new Key('114', 'r', 'R', 'key_regular'),
-    new Key('116', 't', 'T', 'key_regular'),
-    new Key('121', 'y', 'Y', 'key_regular'),
-    new Key('117', 'u', 'U', 'key_regular'),
-    new Key('105', 'i', 'I', 'key_regular'),
-    new Key('111', 'o', 'O', 'key_regular'),
-    new Key('112', 'p', 'P', 'key_regular'),
-    new Key('112', '[', '{', 'key_regular'),
-    new Key('112', ']', '}', 'key_regular'),
-    new Key('112', '\\', '|', 'key_regular'),
+    new Key('Tab', 'tab', '', 'key_tab'),
+    new Key('KeyQ', 'q', 'Q', 'key_regular'),
+    new Key('KeyW', 'w', 'W', 'key_regular'),
+    new Key('KeyE', 'e', 'E', 'key_regular'),
+    new Key('KeyR', 'r', 'R', 'key_regular'),
+    new Key('KeyT', 't', 'T', 'key_regular'),
+    new Key('KeyY', 'y', 'Y', 'key_regular'),
+    new Key('KeyU', 'u', 'U', 'key_regular'),
+    new Key('KeyI', 'i', 'I', 'key_regular'),
+    new Key('KeyO', 'o', 'O', 'key_regular'),
+    new Key('KeyP', 'p', 'P', 'key_regular'),
+    new Key('BracketLeft', '[', '{', 'key_regular'),
+    new Key('BracketRight', ']', '}', 'key_regular'),
+    new Key('Backslash', '\\', '|', 'key_regular'),
 
-    new Key('20', 'caps lock', '', 'key_capslock'),
-    new Key('97', 'a', 'A', 'key_regular'),
-    new Key('115', 's', 'S', 'key_regular'),
-    new Key('100', 'd', 'D', 'key_regular'),
-    new Key('102', 'f', 'F', 'key_regular'),
-    new Key('103', 'g', 'G', 'key_regular'),
-    new Key('104', 'h', 'H', 'key_regular'),
-    new Key('106', 'j', 'J', 'key_regular'),
-    new Key('107', 'k', 'K', 'key_regular'),
-    new Key('108', 'l', 'L', 'key_regular'),
-    new Key('186', ';', ':', 'key_regular'),
-    new Key('222', '\'', '\"', 'key_regular'),
-    new Key('13', 'return', '', 'key_return'),
+    new Key('CapsLock', 'caps lock', '', 'key_capslock'),
+    new Key('KeyA', 'a', 'A', 'key_regular'),
+    new Key('KeyS', 's', 'S', 'key_regular'),
+    new Key('KeyD', 'd', 'D', 'key_regular'),
+    new Key('KeyF', 'f', 'F', 'key_regular'),
+    new Key('KeyG', 'g', 'G', 'key_regular'),
+    new Key('KeyH', 'h', 'H', 'key_regular'),
+    new Key('KeyJ', 'j', 'J', 'key_regular'),
+    new Key('KeyK', 'k', 'K', 'key_regular'),
+    new Key('KeyL', 'l', 'L', 'key_regular'),
+    new Key('Semicolon', ';', ':', 'key_regular'),
+    new Key('Quote', '\'', '\"', 'key_regular'),
+    new Key('Enter', 'return', '', 'key_return'),
 
-    new Key('16', 'shift', '', 'key_shift'),
-    new Key('122', 'z', 'Z', 'key_regular'),
-    new Key('120', 'x', 'X', 'key_regular'),
-    new Key('99', 'c', 'C', 'key_regular'),
-    new Key('118', 'v', 'V', 'key_regular'),
-    new Key('98', 'b', 'B', 'key_regular'),
-    new Key('110', 'n', 'N', 'key_regular'),
-    new Key('109', 'm', 'M', 'key_regular'),
-    new Key('188', ',', '<', 'key_regular'),
-    new Key('190', '.', '>', 'key_regular'),
-    new Key('191', '/', '?', 'key_regular'),
-    new Key('16', 'shift', '', 'key_shift'),
+    new Key('ShiftLeft', 'shift', '', 'key_shift'),
+    new Key('KeyZ', 'z', 'Z', 'key_regular'),
+    new Key('KeyX', 'x', 'X', 'key_regular'),
+    new Key('KeyC', 'c', 'C', 'key_regular'),
+    new Key('KeyV', 'v', 'V', 'key_regular'),
+    new Key('KeyB', 'b', 'B', 'key_regular'),
+    new Key('KeyN', 'n', 'N', 'key_regular'),
+    new Key('KeyM', 'm', 'M', 'key_regular'),
+    new Key('Comma', ',', '<', 'key_regular'),
+    new Key('Period', '.', '>', 'key_regular'),
+    new Key('Slash', '/', '?', 'key_regular'),
+    new Key('ShiftRight', 'shift', '', 'key_shift'),
 
-    new Key('17', 'control', '', 'key_regular'),
-    new Key('18', 'option', '', 'key_regular'),
-    new Key('91', 'command', '', 'key_command'),
-    new Key('32', '', '', 'key_space'),
-    new Key('91', 'command', '', 'key_command'),
-    new Key('18', 'option', '', 'key_regular'),
-    new Key('38', '<', '', 'key_up'),
-    new Key('37', '>', '', 'key_left'),
-    new Key('40', '\\/', '', 'key_down'),
-    new Key('39', '^', '', 'key_right'),
-
+    new Key('ControlLeft', 'control', '', 'key_regular'),
+    new Key('AltLeft', 'option', '', 'key_regular'),
+    new Key('MetaLeft', 'command', '', 'key_command'),
+    new Key('Space', '', '', 'key_space'),
+    new Key('MetaRight', 'command', '', 'key_command'),
+    new Key('AltRight', 'option', '', 'key_regular'),
+    new Key('ArrowLeft', '<', '', 'key_up'),
+    new Key('ArrowRight', '>', '', 'key_left'),
+    new Key('ArrowDown', '\\/', '', 'key_down'),
+    new Key('ArrowUp', '^', '', 'key_right'),
 
 
 ];
@@ -90,7 +89,7 @@ document.body.append(header);
 
 let input = document.createElement('input');
 input.classList.add('input');
-input.type= "text";
+input.type = "text";
 document.body.append(input);
 
 let keyboardWrapper = document.createElement('div');
@@ -112,7 +111,6 @@ for (let i = 0; i < keyboardLayout.length; i++) {
     smallText.innerText = k.additionalText;
 
 
-
     keyNode.append(mainText);
     keyNode.append(smallText);
 
@@ -121,4 +119,20 @@ for (let i = 0; i < keyboardLayout.length; i++) {
 
 document.body.append(keyboardWrapper);
 
+let inp = document.getElementsByClassName('input')[0]
+document.addEventListener('keydown', function (e) {
+    let key = e.key;
+    if (/^[a-zA-Z0-9`~!@#№$%:,^&.*;()_\-+={}|"'<>?\/\[\]]$/.test(key)) {
+        inp.value = inp.value + key;
+    }
+    document.querySelector('.keyboard-wrapper .key[data-code="'
+        + e.code + '"]').classList.add('color');
+})
+
+document.addEventListener('keyup', function (e) {
+    document.querySelector('.keyboard-wrapper .key[data-code="'
+        + e.code + '"]').classList.remove('color');
+
+
+})
 

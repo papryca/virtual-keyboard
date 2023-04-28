@@ -21,6 +21,10 @@
   margin: 3px;
   background-color: #2d2a2a;
   opacity: 999;
+  &:hover{
+    background-color:dodgerblue;
+    cursor: pointer;
+  }
 
   &__symbol {
     justify-content: center;
@@ -63,18 +67,25 @@
   min-height: 280px;
   margin: 40px auto 10px auto;
   display: block;
+  pointer-events: none;
 }
 
 .header {
   font-size: 3.2rem;
   text-align: center;
-  color: rebeccapurple;
   letter-spacing: 0.06em;
   &__logo{
-
-
+    color: rebeccapurple;
   }
 }
+.color{
+  background-color: aqua;
+  transition: all 0.3s;
+  border-radius: 50%;
+}
+
+
+
 
 
 
