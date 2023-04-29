@@ -16,7 +16,10 @@
   height: 50px;
   width: 50px;
   border: 2px solid black;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-radius: 5px;
   margin: 3px;
   background-color: #2d2a2a;
@@ -86,12 +89,21 @@
   transition: all 0.3s;
   border-radius: 50%;
 }
-.hidden{
+//capslock-active
+.key_capitalize .key__main-text {
   display: none;
 }
 
+.key_capitalize .key__sub-text {
+  display: block;
+}
 
+.capslock-active .key_capitalize .key__main-text {
+  display: block;
+}
 
-
+.capslock-active .key_capitalize .key__sub-text {
+  display: none;
+}
 
 
