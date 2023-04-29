@@ -4,7 +4,7 @@
   border: 2px solid black;
   display: block;
   border-radius: 4px;
-  width: 870px;
+  width: 874px;
   height: 310px;
   margin: 0 auto;
 
@@ -25,6 +25,11 @@
     background-color:dodgerblue;
     cursor: pointer;
   }
+  &:active{
+    background-color: aqua;
+    transition: all 0.3s;
+    border-radius: 50%;
+  }
 
   &__symbol {
     justify-content: center;
@@ -33,31 +38,29 @@
   }
 
   &_delete {
-    width: 80px;
-  }
-
-  &_tab {
-    width: 80px;
+    width: 105px;
   }
 
   &_capslock {
-    width: 94px;
+    width: 107px;
   }
 
   &_return {
-    width: 94px;
+    width: 105px;
   }
 
-  &_shift {
-    width: 123px;
+  &_shift-left {
+    width: 161px;
   }
+
+
 
   &_command {
-    width: 70px;
+    width: 89px;
   }
 
   &_space {
-    width: 270px;
+    width: 308px;
   }
 
 }
@@ -82,6 +85,9 @@
   background-color: aqua;
   transition: all 0.3s;
   border-radius: 50%;
+}
+.hidden{
+  display: none;
 }
 
 
