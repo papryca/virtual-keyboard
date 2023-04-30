@@ -1,0 +1,213 @@
+.keyboard-wrapper {
+  background-color: $color-keyboard;
+  padding: 15px;
+  border: 2px solid black;
+  display: block;
+  border-radius: 4px;
+  width: 874px;
+  height: 310px;
+  margin: 0 auto;
+
+
+}
+
+.key {
+  float: left;
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 3px;
+  background-color: #2d2a2a;
+  opacity: 999;
+
+  &:hover {
+    background-color: dodgerblue;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #ce4bd2;
+    transition: all 0.3s;
+    border-radius: 50%;
+  }
+
+  &__symbol {
+    justify-content: center;
+    margin: 0;
+    padding: 3px;
+  }
+
+  &_delete {
+    width: 105px;
+  }
+
+  &_capslock {
+    width: 107px;
+  }
+
+  &_return {
+    width: 105px;
+  }
+
+  &_shift-left {
+    width: 161px;
+  }
+
+
+  &_command {
+    width: 89px;
+  }
+
+  &_space {
+    width: 308px;
+  }
+
+}
+
+.input {
+  width: 870px;
+  min-height: 260px;
+  margin: 15px auto 10px auto;
+  display: block;
+
+}
+
+.header {
+  font-size: 3.2rem;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  &__logo {
+    color: $color-text;
+    margin: 5px;
+  }
+}
+
+.color {
+  background-color: #ce4bd2;
+  transition: all 0.3s;
+  border-radius: 50%;
+  &:hover {
+    background-color: #ce4bd2;
+  }
+}
+
+//shift-left-active
+.info {
+  color: $color-text;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.key__main-text-rus,
+.key__sub-text-rus,
+.key__main-text-en,
+.key__sub-text-en {
+  display: none;
+}
+
+.keyboard-wrapper.en {
+  .key__sub-text-en {
+    display: block;
+  }
+
+  &.capslock-active {
+    .key_capitalize .key__main-text-en {
+      display: block;
+    }
+
+    .key_capitalize .key__sub-text-en {
+      display: none;
+    }
+
+    .key_capitalize.ignore-cap-eng .key__main-text-en {
+      display: none;
+    }
+
+    .key_capitalize.ignore-cap-eng .key__sub-text-en {
+      display: block;
+    }
+
+    &.shift-active {
+      .key_capitalize .key__main-text-en {
+        display: none;
+      }
+
+      .key_capitalize .key__sub-text-en {
+        display: block;
+      }
+
+      .key_capitalize.ignore-cap-eng .key__main-text-en {
+        display: block;
+      }
+
+      .key_capitalize.ignore-cap-eng .key__sub-text-en {
+        display: none;
+      }
+    }
+
+  }
+
+  &.shift-active {
+    .key_regular .key__main-text-en {
+      display: block;
+    }
+
+    .key_regular .key__sub-text-en {
+      display: none;
+    }
+  }
+}
+
+.keyboard-wrapper.ru {
+  .key__sub-text-rus {
+    display: block;
+  }
+
+  &.capslock-active {
+    .key_capitalize .key__main-text-rus {
+      display: block;
+    }
+
+    .key_capitalize .key__sub-text-rus {
+      display: none;
+    }
+
+    &.shift-active {
+      .key_capitalize .key__main-text-rus {
+        display: none;
+      }
+
+      .key_capitalize .key__sub-text-rus {
+        display: block;
+      }
+    }
+
+  }
+
+  &.shift-active {
+    .key_regular .key__main-text-rus {
+      display: block;
+    }
+
+    .key_regular .key__sub-text-rus {
+      display: none;
+    }
+  }
+}
+
+
+.shift-left-active .key_capitalize .key__main-text,
+.shift-right-active .key_capitalize .key__main-text {
+  display: block;
+}
+
+.shift-left-active .key_capitalize .key__sub-text,
+.shift-right-active .key_capitalize .key__sub-text {
+  display: none;
+}
