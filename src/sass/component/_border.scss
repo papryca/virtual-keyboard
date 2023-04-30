@@ -24,12 +24,14 @@
   margin: 3px;
   background-color: #2d2a2a;
   opacity: 999;
-  &:hover{
-    background-color:dodgerblue;
+
+  &:hover {
+    background-color: dodgerblue;
     cursor: pointer;
   }
-  &:active{
-    background-color: aqua;
+
+  &:active {
+    background-color: #ce4bd2;
     transition: all 0.3s;
     border-radius: 50%;
   }
@@ -57,7 +59,6 @@
   }
 
 
-
   &_command {
     width: 89px;
   }
@@ -70,40 +71,205 @@
 
 .input {
   width: 870px;
-  min-height: 280px;
-  margin: 40px auto 10px auto;
+  min-height: 260px;
+  margin: 15px auto 10px auto;
   display: block;
-  pointer-events: none;
+
 }
 
 .header {
   font-size: 3.2rem;
   text-align: center;
   letter-spacing: 0.06em;
-  &__logo{
-    color: rebeccapurple;
+
+  &__logo {
+    color: $color-text;
+    margin: 5px;
   }
 }
-.color{
-  background-color: aqua;
+
+.color {
+  background-color: #ce4bd2;
   transition: all 0.3s;
   border-radius: 50%;
 }
+
+//shift-left-active
+.info {
+  color: $color-text;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.key__main-text-rus,
+.key__sub-text-rus,
+.key__main-text-en,
+.key__sub-text-en {
+  display: none;
+}
+
+.keyboard-wrapper.en {
+  .key__sub-text-en {
+    display: block;
+  }
+
+  &.capslock-active {
+    .key_capitalize .key__main-text-en {
+      display: block;
+    }
+
+    .key_capitalize .key__sub-text-en {
+      display: none;
+    }
+
+    .key_capitalize.ignore-cap-eng .key__main-text-en {
+      display: none;
+    }
+
+    .key_capitalize.ignore-cap-eng .key__sub-text-en {
+      display: block;
+    }
+
+    &.shift-active {
+      .key_capitalize .key__main-text-en {
+        display: none;
+      }
+
+      .key_capitalize .key__sub-text-en {
+        display: block;
+      }
+
+      .key_capitalize.ignore-cap-eng .key__main-text-en {
+        display: block;
+      }
+
+      .key_capitalize.ignore-cap-eng .key__sub-text-en {
+        display: none;
+      }
+    }
+
+  }
+
+  &.shift-active {
+    .key_regular .key__main-text-en {
+      display: block;
+    }
+
+    .key_regular .key__sub-text-en {
+      display: none;
+    }
+  }
+}
+
+.keyboard-wrapper.ru {
+  .key__sub-text-rus {
+    display: block;
+  }
+
+  &.capslock-active {
+    .key_capitalize .key__main-text-rus {
+      display: block;
+    }
+
+    .key_capitalize .key__sub-text-rus {
+      display: none;
+    }
+
+    &.shift-active {
+      .key_capitalize .key__main-text-rus {
+        display: none;
+      }
+
+      .key_capitalize .key__sub-text-rus {
+        display: block;
+      }
+    }
+
+  }
+
+  &.shift-active {
+    .key_regular .key__main-text-rus {
+      display: block;
+    }
+
+    .key_regular .key__sub-text-rus {
+      display: none;
+    }
+  }
+}
+
+
+.shift-left-active .key_capitalize .key__main-text,
+.shift-right-active .key_capitalize .key__main-text {
+  display: block;
+}
+
+.shift-left-active .key_capitalize .key__sub-text,
+.shift-right-active .key_capitalize .key__sub-text {
+  display: none;
+}
+
+
 //capslock-active
-.key_capitalize .key__main-text {
-  display: none;
-}
+//.key_capitalize .key__main-text {
+//  display: none;
+//}
+//
+//.key_capitalize .key__sub-text {
+//  display: block;
+//}
+//
+//.capslock-active .key_capitalize .key__main-text {
+//  display: block;
+//}
+//
+//.capslock-active .key_capitalize .key__sub-text {
+//  display: none;
+//}
+//
+//
+//.key__main-text-en {
+//  display: block;
+//}
+//
+//.key__sub-text-en {
+//  display: block;
+//}
+//
+//.key__main-text-rus {
+//  display: block;
+//}
+//
+//.key__sub-text-rus {
+//  display: block;
+//}
 
-.key_capitalize .key__sub-text {
-  display: block;
-}
-
-.capslock-active .key_capitalize .key__main-text {
-  display: block;
-}
-
-.capslock-active .key_capitalize .key__sub-text {
-  display: none;
-}
-
-
+//.control-active .key_capitalize .key__sub-text {
+//  display: none;
+//}
+////small rus
+//.option-active .key_capitalize .key__sub-text-rus {
+//  display: block;
+//}
+//.option-active .key_capitalize .key__main-text-rus {
+//  display: none;
+//}
+//.control-active .key_capitalize .key__main-text-rus {
+//  display: none;
+//}
+//.control-active .key_capitalize .key__sub-text-rus {
+//  display: block;
+//}
+////big-rus
+//.option-inactive .key_capitalize .key__sub-text-rus {
+//  display: none;
+//}
+//.option-inactive .key_capitalize .key__main-text-rus {
+//  display: block;
+//}
+//.control-inactive .key_capitalize .key__main-text-rus {
+//  display: block;
+//}
+//.control-inactive .key_capitalize .key__sub-text-rus {
+//  display: none;
+//}
