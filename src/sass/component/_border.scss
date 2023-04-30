@@ -92,6 +92,9 @@
   background-color: #ce4bd2;
   transition: all 0.3s;
   border-radius: 50%;
+  &:hover {
+    background-color: #ce4bd2;
+  }
 }
 
 //shift-left-active
@@ -208,68 +211,3 @@
 .shift-right-active .key_capitalize .key__sub-text {
   display: none;
 }
-
-
-//capslock-active
-//.key_capitalize .key__main-text {
-//  display: none;
-//}
-//
-//.key_capitalize .key__sub-text {
-//  display: block;
-//}
-//
-//.capslock-active .key_capitalize .key__main-text {
-//  display: block;
-//}
-//
-//.capslock-active .key_capitalize .key__sub-text {
-//  display: none;
-//}
-//
-//
-//.key__main-text-en {
-//  display: block;
-//}
-//
-//.key__sub-text-en {
-//  display: block;
-//}
-//
-//.key__main-text-rus {
-//  display: block;
-//}
-//
-//.key__sub-text-rus {
-//  display: block;
-//}
-
-//.control-active .key_capitalize .key__sub-text {
-//  display: none;
-//}
-////small rus
-//.option-active .key_capitalize .key__sub-text-rus {
-//  display: block;
-//}
-//.option-active .key_capitalize .key__main-text-rus {
-//  display: none;
-//}
-//.control-active .key_capitalize .key__main-text-rus {
-//  display: none;
-//}
-//.control-active .key_capitalize .key__sub-text-rus {
-//  display: block;
-//}
-////big-rus
-//.option-inactive .key_capitalize .key__sub-text-rus {
-//  display: none;
-//}
-//.option-inactive .key_capitalize .key__main-text-rus {
-//  display: block;
-//}
-//.control-inactive .key_capitalize .key__main-text-rus {
-//  display: block;
-//}
-//.control-inactive .key_capitalize .key__sub-text-rus {
-//  display: none;
-//}

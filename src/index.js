@@ -55,7 +55,7 @@ const keyboardLayout = {
     'KeyK': new Key('KeyK', 'k', 'K', 'л', 'Л', ['key_regular', 'key_capitalize']),
     'KeyL': new Key('KeyL', 'l', 'L', 'д', 'Д', ['key_regular', 'key_capitalize']),
     'Semicolon': new Key('Semicolon', ';', ':', 'ж', 'Ж', ['key_regular', 'key_capitalize', 'ignore-cap-eng']),
-    'Quote': new Key('Quote', '\'', '\"', 'э', 'Э', ['key_regular', 'key_capitalize', 'ignore-cap-eng']),
+    'Quote': new Key('Quote', '\'', '"', 'э', 'Э', ['key_regular', 'key_capitalize', 'ignore-cap-eng']),
     'Enter': new Key('Enter', 'Enter', '', 'Enter', '', ['key_return']),
 
     'ShiftLeft': new Key('ShiftLeft', 'shift', '', 'shift', '', ['key_shift-left']),
@@ -111,7 +111,7 @@ let ShiftActive = false;
 let ControlActive = false;
 let AltActive = false;
 
-for (const [key, value] of Object.entries(keyboardLayout)) {
+for (const [, value] of Object.entries(keyboardLayout)) {
     let k = value;
 
     let keyNode = document.createElement('div');
@@ -341,6 +341,26 @@ document.querySelectorAll('.key_regular').forEach(btn => {
 });
 
 
+let clickedButton;
+document.querySelectorAll('.key').forEach(btn => {
+    btn.addEventListener('mousedown', function (e) {
+        clickedButton = e.currentTarget;
+        console.log(clickedButton);
+        e.currentTarget.classList.add('color');
+    });
+
+    btn.addEventListener('mouseup', function (e) {
+        e.currentTarget.classList.remove('color');
+        console.log(clickedButton);
+        clickedButton.classList.remove('color');
+    });
+});
+
+document.addEventListener('mouseup', function () {
+    clickedButton.classList.remove('color');
+})
+
+
 document.addEventListener('keyup', function (e) {
     document.querySelector('.keyboard-wrapper .key[data-code="'
         + e.code + '"]').classList.remove('color');
@@ -367,10 +387,10 @@ const deleteBackspace = () => {
     let enter = document.querySelector('.keyboard-wrapper .key[data-code="Delete"]');
     enter.addEventListener('click', () => {
         let cursor = input.selectionStart;
-        let before = input.value.slice(0, cursor-1);
+        let before = input.value.slice(0, cursor - 1);
         let after = input.value.slice(cursor);
         input.value = before + after;
-        input.setSelectionRange(cursor -1, cursor);
+        input.setSelectionRange(cursor - 1, cursor);
         // input.value = input.value.slice(0, input.value.length - 1)
     })
 };
@@ -382,7 +402,6 @@ const deleteLastSymbol = () => {
         let cursor = input.selectionStart;
         let before = input.value.slice(0, cursor);
         let after = input.value.slice(cursor + 1);
-        console.log(before)
         input.value = before + after;
         input.setSelectionRange(cursor, cursor);
 
@@ -410,15 +429,15 @@ tab();
 const arrowLeft = () => {
     let arrow = document.querySelector('.keyboard-wrapper .key[data-code="ArrowLeft"]');
     arrow.addEventListener('click', () => {
-        input.value = input.value + this.additionalText;
-    })
+        input.value = input.value + keyboardLayout['ArrowLeft'].additionalText;
+    });
 };
 arrowLeft();
 
 const arrowRight = () => {
     let arrow = document.querySelector('.keyboard-wrapper .key[data-code="ArrowRight"]');
     arrow.addEventListener('click', () => {
-        input.value = input.value + this.additionalText;
+        input.value = input.value + keyboardLayout['ArrowRight'].additionalText;
     })
 };
 arrowRight();
@@ -426,7 +445,7 @@ arrowRight();
 let arrowDown = () => {
     let arrow = document.querySelector('.keyboard-wrapper .key[data-code="ArrowDown"]');
     arrow.addEventListener('click', () => {
-        input.value = input.value + this.additionalText;
+        input.value = input.value + keyboardLayout['ArrowDown'].additionalText;
     });
 };
 arrowDown();
@@ -434,7 +453,7 @@ arrowDown();
 const arrowUp = () => {
     let arrow = document.querySelector('.keyboard-wrapper .key[data-code="ArrowUp"]');
     arrow.addEventListener('click', () => {
-        input.value = input.value + this.additionalText;
+        input.value = input.value + keyboardLayout['ArrowUp'].additionalText;
     });
 };
 arrowUp();
@@ -453,12 +472,12 @@ const shift = () => {
     let shiftL = document.querySelector('.keyboard-wrapper .key[data-code="ShiftLeft"]');
     let shiftR = document.querySelector('.keyboard-wrapper .key[data-code="ShiftRight"]');
 
-    let down = (e) => {
+    let down = () => {
         keyboardWrapper.classList.add("shift-active");
         ShiftActive = true;
     };
 
-    let up = (e) => {
+    let up = () => {
         keyboardWrapper.classList.remove("shift-active");
         ShiftActive = false;
     };
@@ -470,12 +489,3 @@ const shift = () => {
     shiftR.addEventListener('mouseup', up);
 };
 shift();
-
-//if (e.code === "ShiftLeft") {
-//         keyboardWrapper.classList.toggle("shift-active");
-//         ShiftActive = true;
-//     }
-//     if (e.code === "ShiftRight") {
-//         keyboardWrapper.classList.toggle("shift-active");
-//         ShiftActive = true;
-//     }
