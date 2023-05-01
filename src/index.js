@@ -344,15 +344,18 @@ document.querySelectorAll('.key_regular').forEach(btn => {
 let clickedButton;
 document.querySelectorAll('.key').forEach(btn => {
     btn.addEventListener('mousedown', function (e) {
-        clickedButton = e.currentTarget;
-        console.log(clickedButton);
-        e.currentTarget.classList.add('color');
+        if (e.currentTarget.getAttribute('data-code') !== 'CapsLock'){
+            clickedButton = e.currentTarget;
+            e.currentTarget.classList.add('color');
+        }
+
     });
 
     btn.addEventListener('mouseup', function (e) {
-        e.currentTarget.classList.remove('color');
-        console.log(clickedButton);
-        clickedButton.classList.remove('color');
+        if (e.currentTarget.getAttribute('data-code') !== 'CapsLock') {
+            e.currentTarget.classList.remove('color');
+            clickedButton.classList.remove('color');
+        }
     });
 });
 
@@ -391,7 +394,6 @@ const deleteBackspace = () => {
         let after = input.value.slice(cursor);
         input.value = before + after;
         input.setSelectionRange(cursor - 1, cursor);
-        // input.value = input.value.slice(0, input.value.length - 1)
     })
 };
 deleteBackspace();
@@ -459,10 +461,10 @@ const arrowUp = () => {
 arrowUp();
 
 const caps = () => {
-    let caps = document.querySelector('.keyboard-wrapper .key[data-code="CapsLock"]');
+    let caps = document.querySelector('.key_capslock');
     caps.addEventListener('click', () => {
         keyboardWrapper.classList.toggle("capslock-active");
-        caps.classList.toggle('color')
+        caps.classList.toggle('color');
         capslockActive = !capslockActive;
     });
 };
