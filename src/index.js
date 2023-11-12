@@ -88,7 +88,7 @@ let headerLogo = document.createElement('h3');
 
 header.classList.add('header');
 headerLogo.classList.add('header__logo');
-headerLogo.innerText = "RSS Виртуальная клавиатура";
+headerLogo.innerText = "VIRTUAL KEYBOARD";
 header.append(headerLogo)
 document.body.append(header);
 
@@ -154,12 +154,12 @@ document.body.append(keyboardWrapper);
 
 let info = document.createElement('p');
 info.classList.add('info');
-info.innerText = 'Клавиатура создана в операционной системе macOS'
+info.innerText = 'The keyboard was created in the macOS operating system'
 document.body.append(info)
 
 let language = document.createElement('p');
 language.classList.add('info');
-language.innerText = 'Для переключения языка комбинация: левые ctrl + alt'
+language.innerText = 'To switch the language combination: left ctrl + alt'
 document.body.append(language)
 
 
