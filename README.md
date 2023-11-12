@@ -31,7 +31,6 @@ This project implements a virtual keyboard with the following features:
 
 ### `start` ▶️
 
-Runs the keyboard in the development mode.\
 Open [https://papryca.github.io/virtual-keyboard/](https://papryca.github.io/virtual-keyboard/) to view it in the browser.
 
 ## 🚀 Getting Started
